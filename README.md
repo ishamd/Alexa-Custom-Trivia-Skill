@@ -10,3 +10,9 @@ Requirements:
 - Initialize the pomodoro skill through a voice command
 - Start a 25 minute timer and keep track of the number of distractions you encounter through voice commands
 - Display results on a web application
+
+Team NERD:
+Nash
+Ethan
+Robert
+Daniel
