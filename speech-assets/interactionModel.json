@@ -1,0 +1,138 @@
+{
+  "intents": [
+    {
+      "name": "AMAZON.CancelIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.HelpIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.PauseIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.ResumeIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.StopIntent",
+      "samples": []
+    },
+    {
+      "name": "GetNewFactIntent",
+      "samples": [
+        "start focus tracker",
+        "set focus tracker for {timerLength} with a {shortBreak} short break and a {longBreak} long break",
+        "start",
+        "set focus tracker for {timerLength} ",
+        "set focus tracker for {timerLength}  with a {shortBreak} short break",
+        "set focus tracker for {timerLength}  with a {longBreak} long break",
+        "for {timerLength}"
+      ],
+      "slots": [
+        {
+          "name": "timerLength",
+          "type": "AMAZON.DURATION",
+          "samples": [
+            "{timerLength}",
+            "set the focus tracker for {timerLength}"
+          ]
+        },
+        {
+          "name": "shortBreak",
+          "type": "AMAZON.DURATION",
+          "samples": [
+            "{shortBreak}",
+            "set the short break for {shortBreak}"
+          ]
+        },
+        {
+          "name": "longBreak",
+          "type": "AMAZON.DURATION",
+          "samples": [
+            "{longBreak}",
+            "set the long break to be {longBreak}",
+            "set the long break for {longBreak}",
+            "for {longBreak}"
+          ]
+        }
+      ]
+    }
+  ],
+  "prompts": [
+    {
+      "id": "Elicit.Intent-GetNewFactIntent.IntentSlot-timerLength",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "what is your desired timer length?"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-GetNewFactIntent.IntentSlot-shortBreak",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "How long will your short break be?"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-GetNewFactIntent.IntentSlot-longBreak",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "How long will your long break be?"
+        }
+      ]
+    }
+  ],
+  "dialog": {
+    "version": "1.0",
+    "intents": [
+      {
+        "name": "GetNewFactIntent",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "timerLength",
+            "type": "AMAZON.DURATION",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicit": "Elicit.Intent-GetNewFactIntent.IntentSlot-timerLength"
+            }
+          },
+          {
+            "name": "shortBreak",
+            "type": "AMAZON.DURATION",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicit": "Elicit.Intent-GetNewFactIntent.IntentSlot-shortBreak"
+            }
+          },
+          {
+            "name": "longBreak",
+            "type": "AMAZON.DURATION",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicit": "Elicit.Intent-GetNewFactIntent.IntentSlot-longBreak"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
