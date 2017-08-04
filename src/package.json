@@ -1,0 +1,23 @@
+{
+  "name": "alexa-timer",
+  "version": "1.0.0",
+  "description": "Description: Amazon Alexa custom skill to track pomodoros using voice commands Web app to review pomodoro progress",
+  "main": "index.js",
+  "dependencies": {
+    "alexa-sdk": "^1.0.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ishamd/Alexa-Pomodoro-Timer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ishamd/Alexa-Pomodoro-Timer/issues"
+  },
+  "homepage": "https://github.com/ishamd/Alexa-Pomodoro-Timer#readme"
+}
