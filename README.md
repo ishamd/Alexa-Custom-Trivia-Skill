@@ -1,15 +1,15 @@
-# Alexa-Pomodoro-Timer
+# Alexa-Music-Trivia
 Description:
-Amazon Alexa custom skill to track pomodoros using voice commands
-Web app to review pomodoro progress
+Music trivia game built with Amazon Alexa custom skill. The game is simple in that Alexa will play a short audio clip and the player provides an answer. 
 
 Technologies Used:
-- Amazon lambda, nodeJS, dynamoDB
+- Amazon lambda, nodeJS, dynamoDB, S3, API.
 
 Requirements:
-- Initialize the pomodoro skill through a voice command
-- Start a 25 minute timer and keep track of the number of distractions you encounter through voice commands
-- Display results on a web application
+- Initialize the Music Trivia through a voice command
+- Alexa will give instructinos on how to play the game
+- Alexa will play a random short audio clip from a Spotify genre
+- Tally up score at then end and display results on a web application.
 
 Team NERD:
 Nash
